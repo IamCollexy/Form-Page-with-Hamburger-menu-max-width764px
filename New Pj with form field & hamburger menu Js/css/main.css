@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: beige;
+
+    /* Add display: flex; to have a side design of the nav  */
+    align-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: #262626;
+    margin-bottom: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-design {
+    font-size: 2rem;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: dodgerblue;
+}
+
+.hamburger {
+    display: none;
+    cursor: 'pointer';
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media(max-width:768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .stay {
+        margin-bottom: 150px;
+    }
+
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+}
+
+/* A Hamburger menu that transitions on top left side */
+/*.menu {
+    position: absolute;
+    padding: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: blue;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.menu.open .bar-1 {
+    transform: rotate(40deg);
+}
+
+.menu.open .bar-2 {
+    opacity: 0;
+}
+
+.menu.open .bar-3 {
+    transform: rotate(-40deg);
+    margin-top: -12px;
+}
+
+
+nav {
+    height: 0;
+    overflow: hidden;
+    transition: height, 0.4s;
+}
+
+nav.navbar {
+    height: 1000px;
+}
+*/
+
+.container {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.header {
+    background-color: #d8d1d1;
+    padding: 10px 20px;
+}
+
+.form {
+    padding: 20px 40px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #d8d1d1
+}
+
+.form-control.success input {
+    border: 2px solid rgb(26, 167, 26);
+}
+
+.form-control.error input {
+    border: 2px solid rgb(228, 7, 7);
+}
+
+.form-control small {
+    position: absolute;
+    margin: 3px;
+    visibility: hidden;
+}
+
+button {
+    background-color: rgb(4, 95, 53);
+    color: #fff;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 4px;
+    border: 2px solid rgb(4, 95, 53);
+    cursor: pointer;
+}
